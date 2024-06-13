@@ -1,0 +1,161 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body
+{
+    padding: 10px;
+}
+.menubar
+{
+    padding: 10px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: steelblue;
+    position: sticky;
+    top: 0;
+}
+.menubar img
+{
+    height: 50px;
+    width: 50px;
+}
+.menubar ul
+{
+    font-size: 24px;
+    list-style-type: none;
+    width: 50%;
+    /*background-color: yellow;*/
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    transition: 0.5s;
+}
+.menubar ul li i
+{
+    padding-left: 10px;
+    transition: 0.5s;
+}
+.menubar ul li
+{
+    position: relative;
+    transition: 0.5s;
+}
+.menubar ul li ul
+{
+    background-color: #fff;
+    width: 250px;
+    position: absolute;
+    left: 25px;
+    bottom: -80px;
+    display: flex;
+    flex-direction: column;
+    background-color: yellow;
+    display: none;
+    text-align: center;
+    transition: 0.5s;
+}
+.menubar #submenu1
+{
+    transition: 0.5s;
+}
+.menubar #signin
+{
+    padding: 10px 20px;
+    font-size: 20px;
+    border-radius: 20px;
+    border: none;
+    background-color: mediumpurple;
+    color: #fff;
+}
+.menubar #burger
+{
+    font-size: 24px;
+    display: none;
+}
+.menubar ul li:hover i
+{
+    transform: rotate(180deg);
+}
+.menubar ul li:hover #submenu1
+{
+    display: block;
+    transition: 0.5s;
+}
+
+
+
+
+                    /*STYLING PAGE1*/
+.page1
+{
+    height: 100vh;
+    width: 100%;
+    border: 1px solid;
+    background-image: url("gun2.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+
+
+
+
+
+
+
+
+                    /*CONVERINTG TO TAB VIEW*/
+@media (max-width: 900px)
+{
+    .menubar
+    {
+        flex-direction: column;
+    }
+    .menubar ul
+    {
+        flex-direction: column;
+        width: 100%;
+    }
+    .menubar ul li
+    {
+        width: 100%;
+        text-align: center;
+    }
+    .menubar ul li i
+    {
+        display: none;
+    }
+    
+}
+
+
+                    /*CONVERTING TO MOBILE VIEW*/
+@media (max-width: 500px)
+{
+    .menubar
+    {
+        flex-direction: row;
+    }
+    .menubar ul
+    {
+        display: none;
+    }
+    .menubar #signin
+    {
+        display: none;
+    }
+    .menubar #burger
+    {
+        display: block;
+    }
+
+    .page1
+    {
+        height: 60vh;
+    }
+}
